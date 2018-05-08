@@ -1,7 +1,7 @@
 import { NavExampleComponent } from './material-examples/nav-example/nav-example.component';
 import { HomeComponent } from './home/home.component';
-import { MaterialModule } from './app.material';
-import { appRoutes } from './app.routing';
+import { MaterialModule } from './app-material.module';
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -14,6 +14,7 @@ import { MatTableModule, MatPaginatorModule, MatSortModule } from '@angular/mate
 import { RouterModule } from '@angular/router';
 import { DashboardExampleComponent } from './material-examples/dashboard-example/dashboard-example.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,
-    RouterModule.forRoot(appRoutes),
+    AppRoutingModule,
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production }),
   ],
   providers: [],
